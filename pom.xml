@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>parent_project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>14</java.version>
+
+        <restassured.version>4.3.1</restassured.version>
+
+        <jackson.databind.version>2.9.9.3</jackson.databind.version>
+
+        <mysql.connector.java.version>8.0.18</mysql.connector.java.version>
+
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.api.version>1.7.28</slf4j.api.version>
+        <slf4j.log4j12.version>1.7.28</slf4j.log4j12.version>
+
+        <spring.context.versin>5.2.1.RELEASE</spring.context.versin>
+        <hibernate.core.version>5.4.7.Final</hibernate.core.version>
+        <hibernate.search.orm.version>5.11.3.Final</hibernate.search.orm.version>
+        <hibernate.validator.validator.version>6.0.1.Final</hibernate.validator.validator.version>
+        <hibernate.validator.validator.version>6.0.1.Final</hibernate.validator.validator.version>
+        <persistence.api.version>1.0.2</persistence.api.version>
+        <hibernate.c3p0.version>5.4.10.Final</hibernate.c3p0.version>
+
+        <lombok.version>1.18.12</lombok.version>
+        <javafaker.version>1.0.1</javafaker.version>
+
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restassured.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.databind.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${javafaker.version}</version>
+        </dependency>
+
+        <!--library needs to avoid console log4g trash-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.api.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.log4j12.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
